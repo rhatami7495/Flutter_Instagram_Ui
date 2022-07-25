@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget{
       title: "اینستاگرام",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        primaryColor: Colors.black,
         primaryIconTheme: const IconThemeData(
           color: Colors.black
         ),
