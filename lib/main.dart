@@ -51,6 +51,22 @@ class MyHomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appBar,
+      bottomNavigationBar: Container(
+        color: Colors.white,
+        height: 60.0,
+        child: BottomAppBar(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: const [
+              IconButton(onPressed: null, icon: Icon(Icons.home,color: Colors.black)),
+              IconButton(onPressed: null, icon: Icon(Icons.search,color: Colors.black)),
+              IconButton(onPressed: null, icon: Icon(Icons.add_box,color: Colors.black)),
+              IconButton(onPressed: null, icon: Icon(Icons.favorite,color: Colors.black)),
+              IconButton(onPressed: null, icon: Icon(Icons.account_box,color: Colors.black)),
+            ],
+          ),
+        ),
+      ),
     );
   }
 
