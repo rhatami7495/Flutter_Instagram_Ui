@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagramui/my_home_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,54 +22,10 @@ class MyApp extends StatelessWidget{
 
         )
       ),
-      home: MyHomePage() ,
+      home: MyHomePages() ,
     );
   }
 
 }
 
-
-class MyHomePage extends StatelessWidget{
-
-  final appBar = AppBar(
-    backgroundColor: const Color(0xfff8faf8),
-    elevation: 1.0,
-    centerTitle: true,
-    leading: Icon(Icons.camera_alt,
-        color: Colors.black),
-    title: SizedBox(
-      height: 55.0,
-      child:Image.asset("assets/images/instagram.png")
-    ),
-    actions: const [
-      Padding(padding: EdgeInsets.only(right: 12),
-      child: Icon(Icons.send,color: Colors.black,),
-      )
-    ],
-  );
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: appBar,
-      bottomNavigationBar: Container(
-        color: Colors.white,
-        height: 60.0,
-        child: BottomAppBar(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: const [
-              IconButton(onPressed: null, icon: Icon(Icons.home,color: Colors.black)),
-              IconButton(onPressed: null, icon: Icon(Icons.search,color: Colors.black)),
-              IconButton(onPressed: null, icon: Icon(Icons.add_box,color: Colors.black)),
-              IconButton(onPressed: null, icon: Icon(Icons.favorite,color: Colors.black)),
-              IconButton(onPressed: null, icon: Icon(Icons.account_box,color: Colors.black)),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-}
 
