@@ -10,8 +10,10 @@ class MyApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "اینستاگرام",
+
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        fontFamily: 'Vazir',
         primaryColor: Colors.black,
         primaryIconTheme: const IconThemeData(
           color: Colors.black
@@ -23,7 +25,10 @@ class MyApp extends StatelessWidget{
 
         )
       ),
-      home: MyHomePages() ,
+      home: Directionality(
+        textDirection: TextDirection.rtl,
+        child: MyHomePages(),
+      ) ,
     );
   }
 
