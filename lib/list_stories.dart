@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 
 class ListStories extends StatelessWidget {
-  final topText = Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-    children: [
-      Text(
-        "stories",
-        style: TextStyle(fontWeight: FontWeight.bold),
-      ),
-      Row(
-        children: [
-          Text(
-            "watch all",
-            style: TextStyle(fontWeight: FontWeight.bold),
-          ),
-          Icon(Icons.play_arrow)
-        ],
-      )
-    ],
+  final topText = Padding(
+    padding: EdgeInsets.symmetric(horizontal: 10.0),
+    child: Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          "Stories",
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        Row(
+          children: [
+            Text(
+              "Watch all",
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ),
+            Icon(Icons.play_arrow)
+          ],
+        )
+      ],
+    ),
   );
 
   final stories = Expanded(
@@ -64,7 +67,7 @@ class ListStories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.all(16.0),
+      margin: EdgeInsets.all(8.0),
       child: Column(
         children: [topText, stories],
       ),
